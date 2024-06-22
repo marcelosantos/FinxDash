@@ -5,7 +5,7 @@ from pathlib import Path
 
 # Set the title and favicon that appear in the Browser's tab bar.
 st.set_page_config(
-    page_title='GDP dashboard',
+    page_title='Finx Dashboard',
     page_icon=':earth_americas:', # This is an emoji shortcode. Could be a URL too.
 )
 
@@ -54,6 +54,10 @@ def get_gdp_data():
 
     # Convert years from string to integers
     gdp_df['Year'] = pd.to_numeric(gdp_df['Year'])
+
+    #print(gdp_df.columns.tolist())
+    #gdp_df.reset_index(drop=True)
+    #print(gdp_df.columns.tolist())
 
     return gdp_df
 
